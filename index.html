@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>- esimorp1242 -</title>
+  <style>
+      :root {
+  --bg-light: #111;
+  --text-light: #e0e0e0;
+  --bg-dark: #070707;
+  --text-dark: #ffffff;
+  --accent: #a6e22e; /* Accent Color */
+  --card-bg: #1c1c1c;
+  --border-color: #444;
+  --button-bg: #4caf50;
+  --button-hover-bg: #45a049;
+  --link-color: #00bcd4;
+  --link-hover-color: #03a9f4;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--bg-light);
+  color: var(--text-light);
+  transition: background 0.3s, color 0.3s;
+}
+
+.dark {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+header {
+  padding: 3rem;
+  text-align: center;
+  background: linear-gradient(90deg, #00bcd4, #4caf50);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  border-bottom: 4px solid var(--accent);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+section {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+  animation: fadeIn 0.8s ease-in;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+section h2 {
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.user-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.user-card img {
+  width: 20%;
+  height: 20%;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  border: 3px solid var(--accent);
+}
+
+.user-card h3 {
+  margin: 0.5rem 0;
+}
+
+.user-card p {
+  text-align: center;
+  max-width: 500px;
+}
+
+.user-data {
+  margin-top: 1rem;
+  color: var(--text-light);
+  width: 100%;
+}
+
+.user-data div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.user-data div:last-child {
+  border-bottom: none;
+}
+
+.social-links a {
+  margin-right: 1rem;
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+  color: var(--link-hover-color);
+}
+
+.toggle-btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--button-bg);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: background 0.3s ease-in-out;
+}
+
+.toggle-btn:hover {
+  background: var(--button-hover-bg);
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  margin-bottom: 2rem;
+}
+
+.banner-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.social-links a {
+  background: var(--button-bg);
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+  background: var(--button-hover-bg);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  section h2 {
+    font-size: 1.6rem;
+  }
+
+  .user-card img {
+    width: 30%;
+    height: 30%;
+  }
+
+  .user-data div {
+    font-size: 0.9rem;
+  }
+
+  .social-links a {
+    margin-bottom: 1rem;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+  <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+  <header>
+    <h1>@esimorp1242</h1>
+    <p>Kirka.io player and YouTube content creator</p>
+  </header>
+
+  <section id="about" class="card">
+    <h2>About</h2>
+    <p>@average kirka.io content creator (alive) former ascension leader (done) discord - esimorp</p>
+  </section>
+
+  <section id="user-card" class="card">
+    <h2>Player Card</h2>
+    <div class="user-card">
+      <img id="profile-image" src="" alt="Player Avatar">
+      <h3 id="player-name">Loading...</h3>
+      <p id="player-bio"></p>
+      <div class="user-data" id="player-data"></div>
+    </div>
+  </section>
+
+<section id="contact" class="card">
+    <h2>Connect</h2>
+    <div class="social-links">
+      <a href="https://m.youtube.com/@esimorp1242" target="_blank">YouTube</a>
+      <a href="https://discord.gg/cx7R3gjuEJ">VinK Discord</a>
+      <a href="https://kirka.io/profile/Y0VH1E">Kirka</a>
+    </div>
+    <div class="banner-image">
+      <img src="https://yt3.googleusercontent.com/EMCuwz6ZIGutjJSUKAg9QD9v95yfaT4bbW8sLTq0JRTu7WGmoKYzDfm4_6vRuB9wJcd7nyo7=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj" alt="Banner Image">
+    </div>
+</section>
+
+
+  <script>
+    async function fetchUserData() {
+      try {
+        const res = await fetch('https://api.allorigins.win/raw?url=' + encodeURIComponent('https://kirka.irrvlo.xyz/_next/data/xtEBRArGU81CVB0dV34HU/users/Y0VH1E.json'));
+        const data = await res.json();
+        const user = data.pageProps.userData;
+
+        document.getElementById('player-name').innerText = user.name;
+        document.getElementById('player-bio').innerText = user.bio;
+        document.getElementById('profile-image').src = `https://raw.githubusercontent.com/SheriffCarry/KirkaSkins/main/Characters/${user.activeBodySkin.name}-render.png`;
+
+        const playerData = document.getElementById('player-data');
+        playerData.innerHTML = `
+          <div><strong>Short ID:</strong> <span>${user.shortId}</span></div>
+          <div><strong>Clan:</strong> <span>${user.clan}</span></div>
+          <div><strong>Level:</strong> <span>${user.level}</span></div>
+          <div><strong>XP:</strong> <span>${user.totalXp}</span></div>
+          <div><strong>Coins:</strong> <span>${user.coins}</span></div>
+          <div><strong>Diamonds:</strong> <span>${user.diamonds}</span></div>
+          <div><strong>Games Played:</strong> <span>${user.stats.games}</span></div>
+          <div><strong>Kills:</strong> <span>${user.stats.kills}</span></div>
+          <div><strong>Deaths:</strong> <span>${user.stats.deaths}</span></div>
+          <div><strong>Headshots:</strong> <span>${user.stats.headshots}</span></div>
+          <div><strong>Wins:</strong> <span>${user.stats.wins}</span></div>
+          <div><strong>Estimated Time Played:</strong> <span>${user.estimatedTimePlayed}</span></div>
+        `;
+      } catch (err) {
+        console.error('Error fetching user data:', err);
+        document.getElementById('player-name').innerText = 'Failed to load data';
+      }
+    }
+
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+    }
+
+    fetchUserData();
+  </script>
+</body>
+</html>
